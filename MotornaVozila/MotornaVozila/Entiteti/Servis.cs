@@ -15,5 +15,7 @@ namespace MotornaVozila.Entiteti
         public virtual DateTime datumZavrsetka { get; set; }
         public virtual string tipuUsluge { get; set; }
         //public virtual int idtehnicar { get; protected set; }
+
+        public virtual Zaposleni odgovorniTehnicar { get; set; }
     }
 }

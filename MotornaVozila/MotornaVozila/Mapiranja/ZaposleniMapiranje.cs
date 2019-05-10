@@ -32,6 +32,10 @@ namespace MotornaVozila.Mapiranja
             Map(x => x.tipZaposlenog, "TIPZAPOSLENOG");
             Map(x => x.tipUgovora, "TIPUGOVORA");
             Map(x => x.datumIstekaUgovora, "DATUMISTEKAUGOVORA");
+
+            // mapiranje veze odgovorniTehnicar 1:N
+            // lazyload svojstvo je podrazumevano, iskljucuje se sa .not.lazyload();
+            HasMany(x => x.servisi).KeyColumn("IDTEHNICAR");
         }
     }
 }

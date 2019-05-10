@@ -20,5 +20,13 @@ namespace MotornaVozila.Entiteti
         public virtual string tipZaposlenog { get; set; }
         public virtual string tipUgovora { get; set; }
         public virtual DateTime datumIstekaUgovora { get; set; }
+
+        // odgovorni tehnicar u servisima
+        public virtual IList<Servis> servisi { get; set; }
+
+        public Zaposleni()
+        {
+            servisi = new List<Servis>();
+        }
     }
 }
